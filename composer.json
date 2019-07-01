@@ -1,8 +1,6 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "license": "MIT",
+    "name": "jean85/phpstan-doctrine-demo",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
         "psr-4": {
             "AppBundle\\": "src/AppBundle"
@@ -47,9 +45,6 @@
         ]
     },
     "config": {
-        "platform": {
-            "php": "5.6"
-        },
         "sort-packages": true
     },
     "extra": {
