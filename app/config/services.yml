@@ -33,3 +33,5 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+
+#    Doctrine\ODM\MongoDB\DocumentManager: '@doctrine_mongodb.odm.document_manager'
