@@ -20,6 +20,7 @@ RUN apk --no-cache add \
         mbstring \
         opcache \
         pcntl \
+        pdo_mysql \
         zip \
     && apk del .ext-build-deps \
     && pecl clear-cache \
@@ -34,6 +35,9 @@ RUN adduser -D -u 1000 phpstan -G www-data -h /home/phpstan \
     && curl -sS https://getcomposer.org/installer | php -- \
         --install-dir=/usr/local/bin \
         --filename=composer
+
+RUN apk --no-cache add \
+        netcat-openbsd
 
 USER phpstan    
 RUN composer global require hirak/prestissimo --no-progress \

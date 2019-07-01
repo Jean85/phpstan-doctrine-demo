@@ -8,12 +8,16 @@ services:
       COMPOSER_MEMORY_LIMIT: -1
     volumes:
       - ./:/var/www/phpstan
-    links:
+    depends_on:
       - mysql
       - mongo
+    ports:
+      - 127.0.0.1:8000:8000
 
   mysql:
     image: mysql:5.7
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
 
   mongo:
     image: mongo:3.4
